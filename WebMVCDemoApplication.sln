@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVCDemoApplication", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVCDemoApplication.Tests", "WebMVCDemoApplication.Tests\WebMVCDemoApplication.Tests.csproj", "{4E1CBBC9-2036-43E0-9508-53FAAF1ADDBF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeNote", "CodeNote", "{80606739-219E-4EB2-A997-4FDED65886C7}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
