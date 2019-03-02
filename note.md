@@ -2,11 +2,12 @@
 ## Welcome to ASP.NET MVC 记录代码笔记 
 >- 作者：  吃火星的宝宝|朱盟
 >- GitHub: embaobao  
->- Wechat: 吃火星的宝宝  
+>- Wechat: 吃火星的宝宝
+>- 2019-3.2 17:00    
 >- 笔记链接:
 >>1. [ASP.NET MVC笔记](https://github.com/embaobao/MVCDemo/blob/master/note.md "点击查看" ) 
 >>2. [Markdown 语法笔记](https://github.com/embaobao/MVCDemo/blob/master/MarkDownNote.md "点击查看" ) 
->2019-3.2 17:00  
+
 >*为啥要学习mvc了?*  
 >*AJAX技术越来越重要厉害了导致前后端分离趋势*
 >*而状态控制的WebForm来刷新页面给用户的体验过差*  
@@ -28,8 +29,8 @@
 >>   - 控制器(Controller)  **: 输入逻辑 包含在Controllers 文件夹**
 >>- MVC适合场景: ASP.NET MVC WEB 应用基于测试驱动开发的编程模型,不是为了简化代码开发量,他把重点放在了业务实现的分层控制和代码测试. MVC框架特别适合上百人组成的团队实现大型的WEB应用项目的开发
 ___
-
-##  1. MVC 项目的结构
+##  1. MVC项目模板介绍
+###  1.1 MVC 项目的结构
 
 
 >*为什么了解结构？  
@@ -62,4 +63,76 @@ ___
 >注：MVC 项目版本不一样会有所区别  
 当了解这些文件夹或者结构是 会慢慢的掌握MVC 吧？
 ___
-## 2. 项目的开始
+### 1.2 MVC 项目的执行阶段
+1.接受对应用程序的第一个请求 Global.asax文件执行Application_Start() 方法；
+```        
+            // 注册 ASP.NET MVC 应用程序中的所有区域。
+            AreaRegistration.RegisterAllAreas();  
+
+            //全局配置文件 为 ASP.NET 应用程序提供全局 System.Web.Http.HttpConfiguration  
+            //把App_Start 文件夹中WebApiConfig类中Register配置到全局
+            GlobalConfiguration.Configure(WebApiConfig.Register);  
+
+            //过滤器配置 把全局筛选器集合放到应用中App_Start 文件夹中 FilterConfig类中RegisterRoutes方法操作配置过滤器
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);  
+
+            //把全局路由表 放在App_Start 文件夹中 RouteConfig类中的RegisterRoutes方法操作配置路由
+            RouteConfig.RegisterRoutes(RouteTable.Routes);  
+
+            //把全局bundle collection 放在App_Start 文件夹中  BundleConfig类中的 RegisterBundles方法操作配置全局bundle
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+```
+2. 执行路由
+3. 创建MVC请求处理程序
+4. 创建控制器
+5. 执行控制器
+6. 调用操作
+7. 执行结果
+>>具体详情再更新 还没摸清楚
+___
+### 1.3 Controller 与View 的配合关系
+> 为啥子没说Model了？歧视？ 可不是哦！！！  
+>  在模板中还没有涉及到数据模板，在后面我会学到的！
+> 所以先了解控制器和视图之间的配合，来显示数据！
+
+我们不难发现 每个控制器的名字 （去掉Controller）实际上在Views目录下 有文件夹名字所对应  
+而控制器的操作方法对应视图目录下的控制器名字目录下会有 方法名.cshtml 文件作为对应
+
+如：
+
+|控制器|对应视图|
+|----|:--:|
+|HomeController | Views/Home  |
+| HomeController. Index()|Views/Home/index.cshtml|
+|1. 控制器名字 |对应视图文件夹名字|
+|2. 控制器的操作方法|对应视图文件名字 **.cshtml|
+>>注：所以我有必要简单了解下路由对吧？
+___
+### 1.4 ASP.NET MVC模板路由的说明
+>*路由是啥？*
+>是映射到处理程序上的URL模式。   
+>*URL又是啥？* 
+>简短说：URL是一个网络地址  表示网络上资源的位置  
+>URL是统一资源定位符，对可以从互联网上得到的资源的位置和访问方法的一种简洁的表示，
+>是互联网上标准资源的地址  
+>详情：[URL百度百科](https://baike.baidu.com/item/url/110640?fr=aladdin"点下到URL的百科")          
+>>而路由就是： 该映射到网络资源上的URL  我偏不 ！！！ 我让他映射到咱们的程序上（MVC 上的控制器） 返回点啥。
+
+在MVC 中
+App_Start文件夹中 RouteConfig类
+```
+        public static void RegisterRoutes(RouteCollection routes)
+        {
+
+            // 设定忽略给定可用路由列表和约束列表的指定 URL 路由。
+            //参数  url:要忽略的路由的 URL 模式。  
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+           
+            routes.MapRoute(  // 设定映射指定的 URL 路由并设置默认路由值和约束。
+                name: "Default", // name: 要映射的路由的名称。
+                url: "{controller}/{action}/{id}",// url:路由的 URL 模式。
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional } 
+                //defaults: 一个包含默认路由值的对象。
+            );
+        }
+```
