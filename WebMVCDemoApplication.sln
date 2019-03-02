@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVCDemoApplication.Tests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeNote", "CodeNote", "{80606739-219E-4EB2-A997-4FDED65886C7}"
 	ProjectSection(SolutionItems) = preProject
-		index.html = index.html
+		note.md = note.md
 	EndProjectSection
 EndProject
 Global
