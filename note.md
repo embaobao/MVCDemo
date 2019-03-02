@@ -1,25 +1,11 @@
-﻿<<<<<<< HEAD
-﻿# .NETMVC 学习记录笔记
-## Welcome to ASP.NET MVC For GitHub 记录代码笔记 
-
->- 作者：  吃火星的宝宝|朱盟|  
-=======
 ﻿# .NETMVC 基础入门学习笔记 
 ## Welcome to ASP.NET MVC For GitHub 记录代码笔记 
-
 >- 作者：  吃火星的宝宝|朱盟
->>>>>>> markdown 笔记修改 v0.5
 >- GitHub: embaobao  
 >- Wechat: 吃火星的宝宝  
 >- 笔记链接:
 >>1. [ASP.NET MVC笔记](https://github.com/embaobao/MVCDemo/blob/master/note.md "点击查看" ) 
-<<<<<<< HEAD
->>1. [Markdown 语法笔记](https://github.com/embaobao/MVCDemo/blob/master/MarkDownNote.md "点击查看" ) 
->>
->>    
-=======
->>1. [Markdown 语法笔记](https://github.com/embaobao/MVCDemo/blob/master/MarkDownNote.md "点击查看" )  
-
+>>2. [Markdown 语法笔记](https://github.com/embaobao/MVCDemo/blob/master/MarkDownNote.md "点击查看" ) 
 >2019-3.2 17:00  
 >*为啥要学习mvc了?*  
 >*AJAX技术越来越重要厉害了导致前后端分离趋势*
