@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## Welcome to ASP.NET MVC For GitHub 记录代码笔记 
 
-You can use the [editor on GitHub](https://github.com/embaobao/WebMVCDemoApplication/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/embaobao/WebMVCDemoApplication/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+>- 作者：  吃火星的宝宝|朱盟|  
+>- GitHub: embaobao  
+>- Wechat: 吃火星的宝宝  
+>- 笔记链接:
+>>1. [ASP.NET MVC笔记](https://github.com/embaobao/MVCDemo/blob/master/note.md "点击查看" ) 
+>>1. [Markdown 语法笔记](https://github.com/embaobao/MVCDemo/blob/master/MarkDownNote.md "点击查看" ) 
+>>
+>>    
