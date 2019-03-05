@@ -1,8 +1,72 @@
 ﻿
 @{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";  /*用于声明布局页面是啥*/
     ViewBag.Title = "Index";
+    var result = string.Empty;
+    //用户提交第一次一般都是GET 若不是说明不是第一次
+    if (IsPost)
+    {
+        result = "您已经提交了";
+    }
+    else
+    {
+        result = "未提交";
+    }
+
 }
+
+
+
+    <form method="post" action="">
+        <p> @result </p>
+        <input type="submit" name="submit"  value="尝试提交"/>
+    </form>
+
 
 <h2>Index</h2>
 
-<p> @ViewBag.Message </p>
+<p> @ViewBag.Message </p> @*这里是注释 此注释不会发送到客户端 与下方不同  显示ViewBag中Message *@
+<!-- 此注释显示在客户端-->
+@ViewData["1"]  @*这里是注释 显示ViewData中键值为‘1’的值 *@
+
+@{
+    @:用户： @Model.Name @* @: 用于在@{}代码块中显示单行文本 而多行文本用HTML 中的text标签  显示View（）中传过来的对象中属性Name的值 = ViewData.Model.Name *@
+    <text>
+        密码：@TempData["Pw"] @*这里是注释 显示TempData 暂时数据 中键值为‘Pw’的值 *@
+    </text>
+}
+
+<text>
+
+
+
+    @Html.Raw("<h5> 欢迎您的到来！</h5>"); @*Html.Raw 方法是 用于显示HTML 编码的字符 按原样显示 不进行编码 *@
+
+
+    @for (int i = 0; i < 3; i++)
+    {
+        <p> @i</p>
+    }
+
+</text>
+在web.config 中 设置 视图页面引用的类库    <!-- 此处配置的事在视图页面引用的类库-->
+<text>
+
+    system.web.webPages.razor>
+        host>
+        pages>
+            namespaces>
+                <! -- 此处配置的事在视图页面引用的类库-->
+                < add namespace="System.Web.Mvc" />
+                < add namespace="System.Web.Mvc.Ajax" />
+                < add namespace="System.Web.Mvc.Html" />
+                < add namespace="System.Web.Optimization" />
+                < add namespace="System.Web.Routing" />
+    
+</text>
+
+@section foot{
+    <p>
+       应用程序布局页 底部 2019 3.5 
+    </p>
+    }

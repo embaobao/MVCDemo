@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h3>布局页实例</h3>
+        </div>
+
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        @RenderSection("foot");
+    </footer>
+</body>
+</html>
