@@ -5,12 +5,34 @@
 >- Wechat: 吃火星的宝宝
 >- Emil:1132067567@qq.com
 >- https://github.com/embaobao/MVCDemo/blob/master/lovelifelogo.png?raw=true
->- 163Email:chihuoxingdebaobao@163.com
+>- 163 Email:chihuoxingdebaobao@163.com
 >- 2019-3.2 17:00    
 >- 笔记链接:
 >>1. [ASP.NET MVC笔记](https://github.com/embaobao/MVCDemo/blob/master/note.md "点击查看" ) 
->>2. [Markdown 语法笔记](https://github.com/embaobao/MVCDemo/blob/master/MarkDownNote.md "点击查看" ) 
->>
+>>2. [Markdown 语法笔记](https://github.com/embaobao/MVCDemo/blob/master/MarkDownNote.md "点击查看"  
+ )   
+<!-- TOC -->
+autoauto- [.NETMVC 基础入门学习笔记](#netmvc-基础入门学习笔记)  
+auto- [Welcome to ASP.NET MVC 记录代码笔记](#welcome-to-aspnet-mvc-记录代码笔记)  
+auto    - [1. MVC项目模板介绍](#1-mvc项目模板介绍)  
+auto        - [1.1 MVC 项目的结构](#11-mvc-项目的结构)  
+auto    - [1.2 MVC 项目的执行阶段](#12-mvc-项目的执行阶段)  
+auto        - [1.3 Controller 与View 的配合关系](#13-controller-与view-的配合关系)  
+auto        - [1.4 ASP.NET MVC模板路由的说明](#14-aspnet-mvc模板路由的说明)  
+auto            - [1.4.2 App_Start文件夹中 RouteConfig类](#142-app_start文件夹中-routeconfig类)  
+auto            - [1.4.3 URL 路由模式的说明](#143-url-路由模式的说明)  
+auto                - [1.4.3.1 MVC和WEB程序 URL 的映射区别](#1431-mvc和web程序-url-的映射区别)  
+auto                - [1.4.3.2 URL 模式](#1432-url-模式)  
+auto    - [2.控制器 （必须用Controller结尾命名的类）](#2控制器-必须用controller结尾命名的类)  
+auto        - [2.1 开始创建一个控制器及对应视图](#21-开始创建一个控制器及对应视图)  
+auto            - [2.1.1 第一种方式](#211-第一种方式)  
+auto            - [2.1.2 第二种方法实现](#212-第二种方法实现)  
+auto            - [2.1.3 返回字符串的操作方法](#213-返回字符串的操作方法)  
+auto        - [2.2](#22)  
+auto    - [3 视图 （控制器的‘对象’-两者呼应）](#3-视图-控制器的对象-两者呼应)  
+auto        - [3.1 Razor 视图引擎](#31-razor-视图引擎)
+<!-- /TOC -->
+
 >*为啥要学习mvc了?*  
 >*AJAX技术越来越重要厉害了导致前后端分离趋势*
 >*而状态控制的WebForm来刷新页面给用户的体验过差*  
@@ -66,7 +88,7 @@ ___
 >注：MVC 项目版本不一样会有所区别  
 当了解这些文件夹或者结构是 会慢慢的掌握MVC 吧？
 ___
-### 1.2 MVC 项目的执行阶段
+## 1.2 MVC 项目的执行阶段
 1.接受对应用程序的第一个请求 Global.asax文件执行Application_Start() 方法；
 ```        
             // 注册 ASP.NET MVC 应用程序中的所有区域。
@@ -85,12 +107,12 @@ ___
             //把全局bundle collection 放在App_Start 文件夹中  BundleConfig类中的 RegisterBundles方法操作配置全局bundle
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 ```
-2. 执行路由
-3. 创建MVC请求处理程序
-4. 创建控制器
-5. 执行控制器
-6. 调用操作
-7. 执行结果
+1. 执行路由
+2. 创建MVC请求处理程序
+3. 创建控制器
+4. 执行控制器
+5. 调用操作
+6. 执行结果
 >>具体详情再更新 还没摸清楚
 ___
 ### 1.3 Controller 与View 的配合关系
