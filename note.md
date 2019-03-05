@@ -4,6 +4,7 @@
 >- GitHub: embaobao  
 >- Wechat: 吃火星的宝宝
 >- Emil:1132067567@qq.com
+>- https://github.com/embaobao/MVCDemo/blob/master/lovelifelogo.png?raw=true
 >- 163Email:chihuoxingdebaobao@163.com
 >- 2019-3.2 17:00    
 >- 笔记链接:
@@ -235,12 +236,12 @@ public ActionResult Index()
 右击  
 添加视图
 如图：  
-![给操作添加视图0](640.png"给操作添加视图0")
+![给操作添加视图0](https://github.com/embaobao/MVCDemo/blob/master/640.png?raw=true"给操作添加视图0")
 默认视图的命名  
-![给操作添加视图1](641.png"给操作添加视图1")
+![给操作添加视图1](https://github.com/embaobao/MVCDemo/blob/master/641.png?raw=true"给操作添加视图1")
  此时观察文件夹时 视图文件夹出现 和控制器中名称对应  
  文件夹下的视图文件出现 和操作方法名对应  
-![给操作添加视图2](642.png"给操作添加视图2")
+![给操作添加视图2](https://github.com/embaobao/MVCDemo/blob/master/642.png?raw=true.png"给操作添加视图2")
 
 修改视图代码：   显示在控制器中赋的值 ViewBag.Message0  
 此处  用的是视图引擎  Razor 他的语法是放在 ‘ @’ 后  
@@ -273,7 +274,7 @@ defaults: new { controller = "Login", action = "Index", id = UrlParameter.Option
 ```
 
 效果如下:  
-![修改路由后效果图](643.png"修改路由后效果图")
+![修改路由后效果图](https://github.com/embaobao/MVCDemo/blob/master/643.png?raw=true"修改路由后效果图")
 >解释
 >  
 >- LoginController 继承于 Controller 表示他是控制器  — *LoginController : Controller**  
@@ -290,11 +291,11 @@ defaults: new { controller = "Login", action = "Index", id = UrlParameter.Option
  - 视图  
  - 命名视图 Showlogin  
 如图  
-![建立视图](i2.png"建立视图")
-![建立视图](i1.png"建立视图")
+![建立视图](https://github.com/embaobao/MVCDemo/blob/master/i2.png?raw=true"建立视图")
+![建立视图](https://github.com/embaobao/MVCDemo/blob/master/i1.png?raw=true"建立视图")
 如图：  
 建立视图成功  
-![建立视图](i0.png"建立视图")  
+![建立视图](https://github.com/embaobao/MVCDemo/blob/master/i0.png?raw=true"建立视图")  
 在Login控制器中新建操作方法 Access
 代码如下：
 ```
@@ -330,7 +331,7 @@ defaults: new { controller = "Login", action = "Index", id = UrlParameter.Option
 
 成功后如图：  
 
-![调用结果](i3.png"调用结果") 
+![调用结果](https://github.com/embaobao/MVCDemo/blob/master/i3.png?raw=true"调用结果") 
 #### 2.1.3 返回字符串的操作方法
 
 我们也可以 返回一句话而不是视图的操作方法
@@ -343,7 +344,7 @@ defaults: new { controller = "Login", action = "Index", id = UrlParameter.Option
         }
 ```
 调用结果如下:   
-![返回字符串的操作方法调用结果](i4.png"返回字符串的操作方法调用结果")
+![返回字符串的操作方法调用结果](https://github.com/embaobao/MVCDemo/blob/master/i4.png?raw=true"返回字符串的操作方法调用结果")
 
  #### 2.1.4 接受参数的操作方法
 
@@ -385,7 +386,7 @@ defaults: new { controller = "Login", action = "Index", id = UrlParameter.Option
 
 效果图如下： 
   
-![ 接受参数的操作方法](i5.png"接受参数的操作方法")
+![ 接受参数的操作方法](https://github.com/embaobao/MVCDemo/blob/master/i5.png?raw=true"接受参数的操作方法")
 
 
 ### 2.2 
