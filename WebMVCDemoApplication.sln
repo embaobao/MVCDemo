@@ -9,17 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMVCDemoApplication.Tests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeNote", "CodeNote", "{80606739-219E-4EB2-A997-4FDED65886C7}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\01.png = ..\..\..\..\Desktop\01.png
-		..\..\..\..\Desktop\640.png = ..\..\..\..\Desktop\640.png
-		..\..\..\..\Desktop\641.png = ..\..\..\..\Desktop\641.png
-		..\..\..\..\Desktop\642.png = ..\..\..\..\Desktop\642.png
-		..\..\..\..\Desktop\643.png = ..\..\..\..\Desktop\643.png
-		..\..\..\..\Desktop\i0.png = ..\..\..\..\Desktop\i0.png
-		..\..\..\..\Desktop\i1.png = ..\..\..\..\Desktop\i1.png
-		..\..\..\..\Desktop\i2.png = ..\..\..\..\Desktop\i2.png
-		..\..\..\..\Desktop\i3.png = ..\..\..\..\Desktop\i3.png
-		..\..\..\..\Desktop\i4.png = ..\..\..\..\Desktop\i4.png
-		..\..\..\..\Desktop\i5.png = ..\..\..\..\Desktop\i5.png
 		note.md = note.md
 	EndProjectSection
 EndProject
