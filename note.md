@@ -206,7 +206,7 @@ ___
 
 如图
  文件夹下多出了  LoginController.cs    
-![添加控制器完成](01.png"添加控制器完成")
+![添加控制器完成](https://raw.githubusercontent.com/embaobao/MVCDemo/master/01.png"添加控制器完成")
 
 默认的代码如下：
 ```
