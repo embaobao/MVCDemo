@@ -1,29 +1,71 @@
 ﻿
 @{
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";  /*用于声明布局页面是啥*/
-    ViewBag.Title = "Index";
+
+
     var result = string.Empty;
     //用户提交第一次一般都是GET 若不是说明不是第一次
     if (IsPost)
     {
-        result = "您已经提交了";
+        var text1 = Request["text1"];
+        var text2 = Request["text2"];
+        result = "提交 求和:" + (text1.AsFloat() + text2.AsFloat()).ToString();
     }
     else
     {
         result = "未提交";
     }
 
+
+}
+@helper function(string[] list)
+{
+
+    foreach (string item in list)
+    {
+        <p> @item</p>
+    }
+
+
 }
 
 
 
-    <form method="post" action="">
-        <p> @result </p>
-        <input type="submit" name="submit"  value="尝试提交"/>
-    </form>
 
+
+@using (Html.BeginForm())
+{
+    <text>       
+ <p> @result </p>
+    <p>
+        <label for="text1">Num One:</label>
+        <input type="text" name="text1" value="" />
+    </p>
+    <p>
+        <label for="text2">Num Two:</label>
+        <input type="text" name="text2" value="" />
+    </p>
+
+
+    </text>
+    @Html.Hidden("hide", "val") <br />
+    @Html.TextBox("tx", "ID") <br />
+    @Html.Password("pw", "123") <br />
+    @Html.RadioButton("rb", "男", true) <br />
+    @Html.CheckBox("checkbox", true) <br />
+    @Html.TextArea("text", "个人信息:", 5, 20, null) <br />
+    @Html.DropDownList("mylist", new SelectList(new[] { "(⊙_⊙)?", "^_^" }), "请选择...") <br />
+    @Html.ListBox("myMullist", new MultiSelectList(new[] { "A", "B" })) <br />
+    <input type="submit" name="submit" value="尝试提交" />
+}
 
 <h2>Index</h2>
+
+@function(new string[] { "helper用于创建类似函数的帮助器", " 用于多次执行的视图代码！"
+,"    using (Html.BeginForm()){ ... } 用于创建表单的帮助器"
+,"BeginForm带有参数时， 第一个参数说明操作方法，第二个参数说明控制器",
+"Html.CheckBox 第一个参数时说明他的名字 ID 第二个参数说明选择情况"
+,""})
 
 <p> @ViewBag.Message </p> @*这里是注释 此注释不会发送到客户端 与下方不同  显示ViewBag中Message *@
 <!-- 此注释显示在客户端-->
@@ -43,30 +85,35 @@
     @Html.Raw("<h5> 欢迎您的到来！</h5>"); @*Html.Raw 方法是 用于显示HTML 编码的字符 按原样显示 不进行编码 *@
 
 
-    @for (int i = 0; i < 3; i++)
-    {
-        <p> @i</p>
-    }
+
+
 
 </text>
 在web.config 中 设置 视图页面引用的类库    <!-- 此处配置的事在视图页面引用的类库-->
 <text>
 
-    system.web.webPages.razor>
-        host>
-        pages>
-            namespaces>
-                <! -- 此处配置的事在视图页面引用的类库-->
-                < add namespace="System.Web.Mvc" />
-                < add namespace="System.Web.Mvc.Ajax" />
-                < add namespace="System.Web.Mvc.Html" />
-                < add namespace="System.Web.Optimization" />
-                < add namespace="System.Web.Routing" />
-    
+    system.web.webPages.razor> <br />
+    host><br />
+    pages><br />
+    namespaces><br />
+    <! -- 此处配置的事在视图页面引用的类库--><br />
+    < add namespace="System.Web.Mvc" /> <br />
+    < add namespace="System.Web.Mvc.Ajax" /><br />
+    < add namespace="System.Web.Mvc.Html" /><br />
+    < add namespace="System.Web.Optimization" /><br />
+    < add namespace="System.Web.Routing" /><br />
+
 </text>
+<ul>
+    <li> @Request.Url  .</li>
+    <li> @Request.FilePath </li>
+    <li> @Request.MapPath(Request.FilePath)</li>
+    <li> @Request.RequestType </li>
+    <li></li>
+</ul>
 
 @section foot{
     <p>
-       应用程序布局页 底部 2019 3.5 
+        应用程序布局页 底部 2019 3.5
     </p>
-    }
+}
