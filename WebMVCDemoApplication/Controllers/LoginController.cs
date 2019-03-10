@@ -23,6 +23,8 @@ namespace WebMVCDemoApplication.Controllers
             //展现数据到视图  把_user 传过去 等同于 ViewData.Model=_user
             return View(_user);
         }
+
+
         // GET: Access
         public ActionResult Access(string name, string pw)
         {

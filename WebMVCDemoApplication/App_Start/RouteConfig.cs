@@ -22,7 +22,7 @@ namespace WebMVCDemoApplication
             routes.MapRoute(  // 设定映射指定的 URL 路由并设置默认路由值和约束。
                 name: "Default", // name: 要映射的路由的名称。
                 url: "{controller}/{action}/{id}",// url:路由的 URL 模式。
-                defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
                 //defaults: 一个包含默认路由值的对象。
             );
         }

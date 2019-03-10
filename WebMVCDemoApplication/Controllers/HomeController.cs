@@ -14,5 +14,12 @@ namespace WebMVCDemoApplication.Controllers
 
             return View();
         }
+
+        public ActionResult Login()
+        {
+            ViewBag.Title = "Home Page";
+
+            return View();
+        }
     }
 }
